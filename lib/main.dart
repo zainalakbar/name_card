@@ -24,61 +24,61 @@ class CardPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: Center(
-        child: Container(
-          width: 300,
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.1),
-                blurRadius: 10,
-                offset: const Offset(0, 5),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage('lib/pp.jpg'),
-              ),
+        child: SingleChildScrollView(
+          child: Container(
+            width: 300,
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  blurRadius: 10,
+                  offset: const Offset(0, 5),
+                ),
+              ],
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('lib/pp.jpg'),
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  'M Zainal Akbar',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
 
-              const SizedBox(height: 20),
+                const Text(
+                  'Mahasiswa IT - Semester 4',
+                  style: TextStyle(fontSize: 16, color: Colors.grey),
+                ),
 
-              const Text(
-                'M Zainal Akbar',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
+                const Divider(
+                  height: 40,
+                  thickness: 1,
+                  indent: 20,
+                  endIndent: 20,
+                ),
 
-              const Text(
-                'Mahasiswa IT - Semester 4',
-                style: TextStyle(fontSize: 16, color: Colors.grey),
-              ),
-
-              const Divider(
-                height: 40,
-                thickness: 1,
-                indent: 20,
-                endIndent: 20,
-              ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 10),
-                    child: Icon(Icons.email, color: Colors.blueGrey),
-                  ),
-                  Text(
-                    'akbarzainalapp166@gmail.com',
-                    style: TextStyle(fontSize: 14),
-                  ),
-                ],
-              ),
-            ],
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                      child: Icon(Icons.email, color: Colors.blueGrey),
+                    ),
+                    Text(
+                      'akbarzainalapp166@gmail.com',
+                      style: TextStyle(fontSize: 14),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
